@@ -2,10 +2,10 @@
 The folder article contains the file that creates every figure in the article "Selective advantage of redirected helping in a viscous population," conducted during my thesis. The file main.ipynb creates all the results in this project. This file computes the inclusive fitness change of redirected helping in a viscous population in an infinite-island/patch model.
 
 2 .System Requirements
-I use Julia language (Julia 1.7.1) to run the computations and to plot the results and jupyter notebook (anaconda3) to have a clear and understandable file. All the Julia libraries needed are written in the first cell of the main.ipynb file and are: Measures, Plots and Latexify.
+I use Julia language (Julia 1.10.3) on Windows 10, 64 bits, to run the computations and to plot the results. One library is needed: PlotlyJS.
 
 3. Instructions to use:
-To run and plot the results, first run every cell "Libraries", "Parameters" and "Functions". Depending on the figure you want to plot, run the cells shown after the title fo the figure. For large brood failure probability (Figures 3-6), run the cell after the title "## Larger brood failure probability: \$p>0\$" to compute the results and another cell depending on the figure you need.
+To run and plot the results, run the julia file in a terminal: julia main.jl. In case you need to add the package PlotlyJS, use "import Pkg" and Pkg.add("PlotlyJS"). 
 
 4. Authorship
 Author: Alan Flatrès, PhD candidate, aflatres@uwo.ca, a project supervised by Pr. Geoff Wild, gwild@uwo.ca, at the University of Western Ontario.
