@@ -338,7 +338,7 @@ ps2 = surface(z=cbs_fixed[:,:,3,1],contours=attr(x=attr(show=true,start=1e-3,siz
 
 p = plot(ps2,layout)
 display(p)
-savefig(p,"cbs_fixed_n2.pdf")
+
 #### n = 4
 
 layout = Layout(scene=attr(xaxis_title="← Survival s",yaxis_title="Dispersal d →",zaxis_title="C:B (survival)",fontsize=12),scene_aspectratio=attr(x=1, y=1, z=1),scene_camera_eye=attr(x=1.5, y=1.5, z=1.5),legend=false,title=attr(text="n=4",x=0.5,y=0.8))
@@ -349,7 +349,6 @@ ps3 =surface(z=cbs_fixed[:,:,4,2],contours=attr(x=attr(show=true,start=1e-3,size
 
 p = plot([ps1,ps2,ps3],layout)
 display(p)
-savefig(p,"cbs_fixed_n4.pdf")
 #### n = 8
 
 layout = Layout(scene=attr(xaxis_title="← Survival s",yaxis_title="Dispersal d →",zaxis_title="C:B (survival)",fontsize=12),scene_aspectratio=attr(x=1, y=1, z=1),scene_camera_eye=attr(x=1.5, y=1.5, z=1.5),legend=false,title=attr(text="n=8",x=0.5,y=0.8))
@@ -360,7 +359,6 @@ ps3 =surface(z=cbs_fixed[:,:,4,3],contours=attr(x=attr(show=true,start=1e-3,size
 
 p = plot([ps1,ps2,ps3],layout)
 display(p)
-savefig(p,"cbs_fixed_n8.pdf")
 ## Figure 3: Fecundity benefits
 ### n = 2
 layout = Layout(scene=attr(zaxis=attr(range=[0,2]),xaxis_title="← Survival s",yaxis_title="Dispersal d →",zaxis_title="C:B (Fecundity)",fontsize=10),scene_aspectratio=attr(x=1, y=1, z=1),scene_camera_eye=attr(x=1.5, y=1.5, z=1.5),legend=false,title=attr(text="n=2",x=0.5,y=0.8),zaxis=attr(range=[0,2]))
@@ -369,7 +367,7 @@ pf2 = surface(contours=attr(x=attr(show=true,start=1e-3,size=0.05, color="black"
 
 p = plot(pf2,layout)
 display(p)
-savefig(p,"cbf_fixed_n2.pdf")
+
 ### n = 4
 
 layout = Layout(scene=attr(zaxis=attr(range=[0,2]),xaxis_title="← Survival s",yaxis_title="Dispersal d →",zaxis_title="C:B (Fecundity)",fontsize=10),scene_aspectratio=attr(x=1, y=1, z=1),scene_camera_eye=attr(x=1.5, y=1.5, z=1.5),legend=false,title=attr(text="n=4",x=0.5,y=0.8),zaxis=attr(range=[0,2]))
@@ -380,7 +378,7 @@ pf3 =surface(contours=attr(x=attr(show=true,start=1e-3,size=0.05, color="red"),x
 
 p = plot([pf1,pf2,pf3],layout)
 display(p)
-savefig(p,"cbf_fixed_n4.pdf")
+
 ### n = 8
 layout = Layout(scene=attr(zaxis=attr(range=[0,2]),xaxis_title="← Survival s",yaxis_title="Dispersal d →",zaxis_title="C:B (Fecundity)",fontsize=10),scene_aspectratio=attr(x=1, y=1, z=1),scene_camera_eye=attr(x=1.5, y=1.5, z=1.5),legend=false,title=attr(text="n=8",x=0.5,y=0.8),zaxis=attr(range=[0,2]))
 
@@ -390,7 +388,7 @@ pf3 =surface(contours=attr(x=attr(show=true,start=1e-3,size=0.05, color="red"),x
 
 p=plot([pf1,pf2,pf3],layout)
 display(p)
-savefig(p,"cbf_fixed_n8.pdf")
+
 ## Figure 4: Comparison of the benefits
 
 layout = Layout(yaxis_title="Survival s",xaxis_title="Backward migration rate m",zaxis_title="C:B",font_size=30,zaxis_range=[0,2])
@@ -401,7 +399,7 @@ p3 = contour(x=range(1e-3,1-1e-3,M),y=range(1e-3,1-1e-3,M),z=cbs_fixed[:,:,4,1]-
 
 p = plot([p1,p2,p3],layout)
 display(p)
-savefig(p,"contour0_fixed.pdf")
+
 
 # Variable number of brood failures per patch
 ## Figure 5: Survival benefits
@@ -416,7 +414,7 @@ ps3 =surface(z=cbs[:,:,4,1],contours=attr(x=attr(show=true,start=1e-3,size=0.05,
 
 p=plot([ps1,ps2,ps3],layout)
 display(p)
-savefig(p,"cbs_n2.pdf")
+
 #### n = 4
 
 layout = Layout(scene=attr(xaxis_title="← Survival s",yaxis_title="Dispersal d →",zaxis_title="C:B (survival)",fontsize=12),scene_aspectratio=attr(x=1, y=1, z=1),scene_camera_eye=attr(x=1.5, y=1.5, z=1.5),legend=false,title=attr(text="n=4",x=0.5,y=0.8))
@@ -427,7 +425,7 @@ ps3 =surface(z=cbs[:,:,4,2],contours=attr(x=attr(show=true,start=1e-3,size=0.05,
 
 p = plot([ps1,ps2,ps3],layout)
 display(p)
-savefig(p,"cbs_n4.pdf")
+
 #### n = 8
 
 layout = Layout(scene=attr(xaxis_title="← Survival s",yaxis_title="Dispersal d →",zaxis_title="C:B (survival)",fontsize=12),scene_aspectratio=attr(x=1, y=1, z=1),scene_camera_eye=attr(x=1.5, y=1.5, z=1.5),legend=false,title=attr(text="n=8",x=0.5,y=0.8))
@@ -437,7 +435,7 @@ ps2 = surface(z=cbs[:,:,3,3],contours=attr(x=attr(show=true,start=1e-3,size=0.05
 ps3 =surface(z=cbs[:,:,4,3],contours=attr(x=attr(show=true,start=1e-3,size=0.05, color="red"),x_end=1,y=attr(show=true,start=1e-3,color="red",size=0.05),y_end=1-1e-3),x=range(1e-3,1-1e-3,M),y=range(1e-3,1-1e-3,M),opacity=0,showscale=false)
 p = plot([ps1,ps2,ps3],layout)
 display(p)
-savefig(p,"cbs_n8.pdf")
+
 ## Figure 6: Fecundity benefits
 ### n = 2
 layout = Layout(scene=attr(zaxis=attr(range=[0,2]),xaxis_title="← Survival s",yaxis_title="Dispersal d →",zaxis_title="C:B (Fecundity)",fontsize=10),scene_aspectratio=attr(x=1, y=1, z=1),scene_camera_eye=attr(x=1.5, y=1.5, z=1.5),legend=false,title=attr(text="n=1",x=0.5,y=0.8),zaxis=attr(range=[0,2]))
@@ -448,7 +446,7 @@ pf3 =surface(contours=attr(x=attr(show=true,start=1e-3,size=0.05, color="red"),x
 
 p = plot([pf1,pf2,pf3],layout)
 display(p)
-savefig(p,"cbf_n2.pdf")
+
 ### n = 4
 
 layout = Layout(scene=attr(zaxis=attr(range=[0,2]),xaxis_title="← Survival s",yaxis_title="Dispersal d →",zaxis_title="C:B (Fecundity)",fontsize=10),scene_aspectratio=attr(x=1, y=1, z=1),scene_camera_eye=attr(x=1.5, y=1.5, z=1.5),legend=false,title=attr(text="n=4",x=0.5,y=0.8),zaxis=attr(range=[0,2]))
@@ -459,7 +457,7 @@ pf3 =surface(contours=attr(x=attr(show=true,start=1e-3,size=0.05, color="red"),x
 
 p = plot([pf1,pf2,pf3],layout)
 display(p)
-savefig(p,"cbf_n4.pdf")
+
 ### n = 8
 layout = Layout(scene=attr(zaxis=attr(range=[0,2]),xaxis_title="← Survival s",yaxis_title="Dispersal d →",zaxis_title="C:B (Fecundity)",fontsize=10),scene_aspectratio=attr(x=1, y=1, z=1),scene_camera_eye=attr(x=1.5, y=1.5, z=1.5),legend=false,title=attr(text="n=8",x=0.5,y=0.8),zaxis=attr(range=[0,2]))
 
@@ -469,7 +467,6 @@ pf3 =surface(contours=attr(x=attr(show=true,start=1e-3,size=0.05, color="red"),x
 
 p = plot([pf1,pf2,pf3],layout)
 display(p)
-savefig(p,"cbf_n8.pdf")
 ## Figure 7: Comparison of the benefits
 ### n = 2
 
@@ -482,8 +479,6 @@ p3 = contour(x=range(1e-3,1-1e-3,M),y=range(1e-3,1-1e-3,M),z=cbs[:,:,4,1]-cbf[:,
 
 p = plot([p0,p1,p2,p3],layout)
 display(p)
-savefig(p,"contour_s-f_n2.pdf")
-
 ### n = 4
 
 layout = Layout(yaxis_title="Survival s",xaxis_title="Dispersal d",zaxis_title="C:B",font_size=30,zaxis_range=[0,2],title=attr(text="n=4",x=0.5))
@@ -495,7 +490,6 @@ p3 = contour(x=range(1e-3,1-1e-3,M),y=range(1e-3,1-1e-3,M),z=cbs[:,:,4,2]-cbf[:,
 
 p = plot([p0,p1,p2,p3],layout)
 display(p)
-savefig(p,"contour_s-f_n4.pdf")
 
 ### n = 8
 
@@ -508,4 +502,3 @@ p3 = contour(x=range(1e-3,1-1e-3,M),y=range(1e-3,1-1e-3,M),z=cbs[:,:,4,3]-cbf[:,
 
 p = plot([p0,p1,p2,p3],layout)
 display(p)
-savefig(p,"contour_s-f_n8.pdf")
