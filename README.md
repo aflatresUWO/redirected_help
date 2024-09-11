@@ -1,5 +1,5 @@
 1. Purpose
-This folder contains the file creating every figure present in the article "Selective advantage of redirected helping in a viscous population" conducted during my thesis. The file main.ipynb creates all the results present in this project. This file computes the inclusive fitness change of redirected helping in a viscous population in an infinite-island/patch model.
+The folder article contains the file that creates every figure in the article "Selective advantage of redirected helping in a viscous population," conducted during my thesis. The file main.ipynb creates all the results in this project. This file computes the inclusive fitness change of redirected helping in a viscous population in an infinite-island/patch model.
 
 2 .System Requirements
 I use Julia language (Julia 1.7.1) to run the computations and to plot the results and jupyter notebook (anaconda3) to have a clear and understandable file. All the Julia libraries needed are written in the first cell of the main.ipynb file and are: Measures, Plots and Latexify.
